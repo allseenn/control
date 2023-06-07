@@ -1,2 +1,2 @@
-This repo contains test for GeekBrain's developer program
+This repo contain control tests for GeekBrain's developer program
 
