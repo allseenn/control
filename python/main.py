@@ -26,8 +26,8 @@ k. kill buffer\n\
 BUF: "
 
 PORT = "\
-ic. imports csv to base\n\
-ij. import json to base\n\
+ic. imports csv to notebook\n\
+ij. import json to notebook\n\
 ec. export to csv file\n\
 ej. export to json file\n\
 bc. buffer to csv file\n\
@@ -136,20 +136,20 @@ def menu():
                 filename = NOTEBOOK if filename == "" else filename 
                 msg = save_base(base, filename)
             case "3": # Find note
-                submenu(base, "Set one or more elements\nexecute find with first key\nf. find record")
+                submenu(base, "Set one or more elements\nexecute find with first key\nf. find note")
             case "4": # Add  note 
-                submenu(base, "Set all elements\nexecute adding with first key\na. add record")
+                submenu(base, "Set all elements\nexecute adding with first key\na. add note")
             case "5": # Update note
-                submenu(base, "Set any element for update\nexecute del with first key\nu. update record") 
+                submenu(base, "Set any element for update\nexecute del with first key\nu. update note") 
             case "6": # Delete note
-                submenu(base, "Set id only for deletion\nexecute del with first key\nd. delete record")   
+                submenu(base, "Set id only for deletion\nexecute del with first key\nd. delete note")   
             case "7": # delete NoteBook
                 filename = input("Enter filename to delete: ") 
                 msg = del_file(filename)
             case "8": # Clean NoteBook
                 print("\033c", end="")
                 print(base) 
-                test = input("Press Enter to return menu: ")
+                foo = input(f"Total is {base.shape[0]} notes\nPress Enter to return menu: ")
             case "9": # Import / Export
                 base = port(base)
     print("\033c", end="")
