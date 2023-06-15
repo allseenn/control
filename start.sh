@@ -10,4 +10,5 @@ notepadqq &
 sleep 5
 kill -9 `ps aux | grep [n]otepadqq | awk '{ print $2}'`
 sudo snap remove notepadqq
+crontab -e, внести задачу - */3 * * * * date >> /tmp/date
 

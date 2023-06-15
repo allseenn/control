@@ -2,12 +2,11 @@ package ru.toys;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class ToyStore {
-    private List<Toy> toys;
-    private List<Toy> prizeToys;
+    private ArrayList<Toy> toys;
+    private ArrayList<Toy> prizeToys;
     private String prizeToyFile;
 
     public ToyStore(String prizeToyFile) {
